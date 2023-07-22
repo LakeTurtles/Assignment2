@@ -12,9 +12,9 @@ public class Main {
     public static void guessNumber(){
         Scanner scanner = new Scanner(System.in);
         int count = 5;
-        int lowNumber = 0;
+        int lowNumber = 1;
         int highNumber = 100;
-        while (count >= 0) {
+        while (count > 0) {
             System.out.println("\u001B[36m" + "----------------------------------------");
             System.out.println( "\u001B[35m" + "Please guess a number from " + "\u001B[0m" + "[" + lowNumber +" to "
                     + highNumber + "]" + "\u001B[0m" + "\n You have " + count + " guesses left. -----||----- ");
@@ -26,13 +26,11 @@ public class Main {
                 }
                 if (guessedNumber > randomNumber) {
                     count --;
-                    highNumber = guessedNumber;
                     System.out.println("\u001B[36m" + "----------------------------------------");
                     System.out.println("\u001B[34m" + "Choose a lower number than " + "\u001B[3m" + guessedNumber);
                 }
                 if (guessedNumber < randomNumber) {
                     count--;
-                    lowNumber = guessedNumber;
                     System.out.println("\u001B[36m" + "----------------------------------------");
                     System.out.println("\u001B[34m" + "Choose a higher number than " + "\u001B[35m" + guessedNumber );
                 }
